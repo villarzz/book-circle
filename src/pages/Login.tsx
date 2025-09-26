@@ -8,15 +8,18 @@ type Props = NativeStackScreenProps<RootStackParamList, 'login'>;
 export default function Login({ navigation }: Props) {
   return (
     <View style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-      <Image
-        source={require('../../assets/logo.png')}
-        style={{ width: 250, height: 250 }}
-      />
+      <Image source={require('../../assets/logo.png')} style={{ width: 250, height: 250 }} />
 
-      <View>
-        <Text style={{ fontSize: 34, fontWeight: '700', color: '#304e6b', letterSpacing: 0.3 }}>Login</Text>
-      </View>
-      <View style={{ width: '325px', marginTop: 24 }}>
+      <Text
+        style={{
+          fontSize: 34,
+          fontWeight: '700',
+          color: '#304e6b',
+          letterSpacing: 0.3,
+        }}>
+        Login
+      </Text>
+      <View style={{ width: 325, marginTop: 24 }}>
         <TextInput
           style={{
             width: '100%',
@@ -29,11 +32,9 @@ export default function Login({ navigation }: Props) {
           placeholder="E-mail"
           placeholderTextColor={'#a1a1aa'}
         />
-        <Text style={{ padding: 4, color: '#a1a1aa' }}>
-          Por favor, insira um e-mail válido.
-        </Text>
+        <Text style={{ padding: 4, color: '#a1a1aa' }}>Por favor, insira um e-mail válido.</Text>
       </View>
-      <View style={{ width: '325px', marginTop: 16 }}>
+      <View style={{ width: 325, marginTop: 16 }}>
         <TextInput
           style={{
             width: '100%',
@@ -47,23 +48,21 @@ export default function Login({ navigation }: Props) {
           placeholderTextColor={'#a1a1aa'}
           secureTextEntry={true}
         />
-        <Text style={{ padding: 4, color: '#a1a1aa' }}>
-          Por favor, insira uma senha válida.
-        </Text>
+        <Text style={{ padding: 4, color: '#a1a1aa' }}>Por favor, insira uma senha válida.</Text>
       </View>
 
       <TouchableOpacity
         onPress={() => navigation.navigate('feed')}
         style={{
           backgroundColor: '#3d87bf',
-          paddingVertical: 12,
+          paddingVertical: 18,
           paddingHorizontal: 24,
           borderRadius: 8,
           alignItems: 'center',
-          width: '325px',
-          marginTop: 24,
+          width: 325,
+          marginTop: 30,
         }}>
-        <Text style={{ color: '#fff', fontSize: 16, fontWeight: '600' }}>Login</Text>
+        <Text style={{ color: '#fff', fontSize: 16, fontWeight: '600' }}>ENTRAR</Text>
       </TouchableOpacity>
     </View>
   );
