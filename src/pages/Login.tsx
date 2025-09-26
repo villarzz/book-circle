@@ -7,13 +7,16 @@ type Props = NativeStackScreenProps<RootStackParamList, 'login'>;
 
 export default function Login({ navigation }: Props) {
   return (
-    <View style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: 20 }}>
+    <View style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
       <Image
         source={require('../../assets/logo.png')}
-        style={{ width: 200, height: 200, marginTop: 55 }}
+        style={{ width: 250, height: 250 }}
       />
+
       <View>
-        <Text style={{ marginBottom: 4 }}>Usuário</Text>
+        <Text style={{ fontSize: 34, fontWeight: '700', color: '#304e6b', letterSpacing: 0.3 }}>Login</Text>
+      </View>
+      <View style={{ width: '325px', marginTop: 24 }}>
         <TextInput
           style={{
             width: '100%',
@@ -23,15 +26,14 @@ export default function Login({ navigation }: Props) {
             padding: 12,
             color: '#000',
           }}
-          placeholder="Enter your e-mail"
-          placeholderTextColor="#a1a1aa"
+          placeholder="E-mail"
+          placeholderTextColor={'#a1a1aa'}
         />
         <Text style={{ padding: 4, color: '#a1a1aa' }}>
-          Please enter a valid e-mail. e.g.: user@example.com
+          Por favor, insira um e-mail válido.
         </Text>
       </View>
-      <View>
-        <Text style={{ marginBottom: 4 }}>Senha</Text>
+      <View style={{ width: '325px', marginTop: 16 }}>
         <TextInput
           style={{
             width: '100%',
@@ -41,23 +43,25 @@ export default function Login({ navigation }: Props) {
             padding: 12,
             color: '#000',
           }}
-          placeholder="Enter your e-mail"
-          placeholderTextColor="#a1a1aa"
+          placeholder="Senha"
+          placeholderTextColor={'#a1a1aa'}
+          secureTextEntry={true}
         />
         <Text style={{ padding: 4, color: '#a1a1aa' }}>
-          Please enter a valid e-mail. e.g.: user@example.com
+          Por favor, insira uma senha válida.
         </Text>
       </View>
 
       <TouchableOpacity
         onPress={() => navigation.navigate('feed')}
         style={{
-          backgroundColor: '#007AFF',
+          backgroundColor: '#3d87bf',
           paddingVertical: 12,
           paddingHorizontal: 24,
           borderRadius: 8,
           alignItems: 'center',
           width: '325px',
+          marginTop: 24,
         }}>
         <Text style={{ color: '#fff', fontSize: 16, fontWeight: '600' }}>Login</Text>
       </TouchableOpacity>
