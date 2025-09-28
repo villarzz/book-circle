@@ -52,7 +52,7 @@ export default function Login({ navigation }: Props) {
       </View>
 
       <TouchableOpacity
-        onPress={() => navigation.navigate('feed')}
+        onPress={() => navigation.navigate('main')}
         style={{
           backgroundColor: '#3d87bf',
           paddingVertical: 18,
